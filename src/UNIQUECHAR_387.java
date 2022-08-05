@@ -1,6 +1,6 @@
 import java.util.HashMap;
 //387. First Unique Character in a String
-public class uniquechar387 {
+public class UNIQUECHAR_387 {
     public static void main(String[] args) {
         System.out.println(uniquechar("leetcode"));
     }
@@ -15,6 +15,7 @@ public class uniquechar387 {
                 map.put(current,-1);
             }
         }
+        //The above code prepares the Hashmap for further analysation
         int min=Integer.MAX_VALUE;
         for(char c: map.keySet()){
             if(map.get(c)> -1 && map.get(c)< min){
