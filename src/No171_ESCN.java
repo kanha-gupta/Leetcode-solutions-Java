@@ -1,6 +1,6 @@
 
 //171. Excel Sheet Column Number
-public class ESCN_171 {
+public class No171_ESCN {
     public static void main(String[] args) {
         System.out.println(excelsheetcolumnumber("ZA"));
     }

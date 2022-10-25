@@ -1,6 +1,6 @@
 import java.util.HashMap;
 //387. First Unique Character in a String
-public class UNIQUECHAR_387 {
+public class No387_UniqueChar {
     public static void main(String[] args) {
         System.out.println(uniquechar("leetcode"));
     }
