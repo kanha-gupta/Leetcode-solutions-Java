@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class No13_RomanToInt {
     public static void main(String[] args) {
-        System.out.println( rti2("XII"));
+        System.out.println( rti2("XCC"));
     }
     static int rti2(String s){
         int total=0;
