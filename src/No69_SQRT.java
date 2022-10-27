@@ -17,6 +17,8 @@ public class No69_SQRT {
                 end=mid;
             }
         }
+        //in the 2nd last step there would be 2 values. i.e. Start and end & for it to decide which value is the answer,
+        //below code is used
         if(end*end==x){
             return (int) end;
         }
