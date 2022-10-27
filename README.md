@@ -1,3 +1,4 @@
 # Leetcode-solutions-Java-
-Leetcode question solutions are provided along with their title & Question number given in website.
 !! CODE INSIDE SRC FOLDER !!
+Files are following the naming format of:- "No" + question number on website + _ + QuestionTitle.
+Contributions are dearly welcome :) 
