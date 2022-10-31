@@ -1,9 +1,12 @@
 public class No9_PalindromeNumber {
     public static void main(String[] args) {
-        System.out.println(isPalindrome(43));
+        System.out.println(isPalindrome(44));
     }
     static boolean isPalindrome(int x){
-        //this code reverses the digits & compares with input number
+        //The number is converted to string especially to check for minus sign. It normally reverses in integer format.
+        String str=String.valueOf(x);
+        if(str.contains("-"))
+            return false;
         boolean flag=true;
         int rev=0;
         int num=x;
