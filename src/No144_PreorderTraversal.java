@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-import com.sun.source.tree.Tree;
 
 import java.util.List;
 import java.util.Stack;
 
-public class No144_PostorderTraversal {
+public class No144_PreorderTraversal {
     public class TreeNode{
         int val;
         TreeNode left;
