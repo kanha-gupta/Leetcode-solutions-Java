@@ -3,7 +3,7 @@ import java.util.Stack;
 
 public class No283_MoveZeroes {
     public static void main(String[] args) {
-        int[] arr={1,2,0,0,3,4,0};
+        int[] arr={1,2,0,0,3,0,4,0};
         moveZeroes(arr);
     }
     static void moveZeroes(int[] nums){
