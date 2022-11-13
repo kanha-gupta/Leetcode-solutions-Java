@@ -1,7 +1,6 @@
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 //below is the Stack method used to solve the question.
 
 public class No94_InorderTraversal {
@@ -19,22 +18,18 @@ public class No94_InorderTraversal {
                 this.right=right;
             }
         }
-
-        public List<Integer> inorderTraversal(TreeNode root) {
-            List<Integer> list = new ArrayList<>();
-            Stack<TreeNode> stack = new Stack<>();
-            TreeNode node = root;
-
-            while (node != null || !stack.isEmpty()) {
-                while (node != null) {
-                    stack.push(node);
-                    node = node.left;
-                }
-                list.add(stack.peek().val);
-                node = stack.pop().right;
-            }
-            return list;
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> inorder = new ArrayList<>();
+        solution(root, inorder);
+        return inorder;
+    }
+    public void solution(TreeNode root, List<Integer> res) {
+        if (root != null) {
+            solution(root.left, res);
+            res.add(root.val);
+            solution(root.right, res);
         }
+    }
 }
 
 
