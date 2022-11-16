@@ -1,5 +1,9 @@
 public class No108_SortedArrayToBST {
-    public class TreeNode {
+    public static void main(String[] args) {
+      int[] arr={-10, -3, 0, 5, 9};
+        System.out.print(sortedArrayToBST(arr));
+    }
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -13,11 +17,11 @@ public class No108_SortedArrayToBST {
         }
     }
 
-    public TreeNode sortedArrayToBST(int[] nums) {
+    static TreeNode sortedArrayToBST(int[] nums) {
         return CreateBST(nums,0,nums.length-1);
         }
         //we use recursive approach to solve the problem
-        private TreeNode CreateBST(int[] nums,int i,int e){
+        static TreeNode CreateBST(int[] nums,int i,int e){
         if(i>e){
             return null;
         }
