@@ -1,8 +1,4 @@
 public class No108_SortedArrayToBST {
-    public static void main(String[] args) {
-      int[] arr={-10, -3, 0, 5, 9};
-        System.out.print(sortedArrayToBST(arr));
-    }
     public static class TreeNode {
         int val;
         TreeNode left;
@@ -17,7 +13,7 @@ public class No108_SortedArrayToBST {
         }
     }
 
-    static TreeNode sortedArrayToBST(int[] nums) {
+    public TreeNode sortedArrayToBST(int[] nums) {
         return CreateBST(nums,0,nums.length-1);
         }
         //we use recursive approach to solve the problem
