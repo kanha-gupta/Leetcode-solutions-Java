@@ -1,0 +1,13 @@
+public class No168_ESCT {
+    public String convertToTitle(int columnNumber) {
+        String result="";
+        while(columnNumber>0){
+            columnNumber--;
+            result=(char)('A' + (columnNumber % 26))
+                    + result;
+            columnNumber=columnNumber/26;
+        }
+        return result;
+    }
+
+}
