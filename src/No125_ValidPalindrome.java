@@ -1,15 +1,11 @@
 public class No125_ValidPalindrome {
-    public static void main(String[] args) {
-        System.out.println(isPalindrome("A man, a plan, a canal: Panama"));
-    }
-
-
-        static boolean isPalindrome(String s) {
-            s = s.toLowerCase().replaceAll("[^a-z0-9]", "");
+        public boolean isPalindrome(String s) {
+           String str = s.toLowerCase().replaceAll("[^a-z0-9]", "");
             int i = 0;
-            int j = s.length() - 1;
+            int j = str.length() - 1;
             while(i <= j) {
-                if (s.charAt(i) != s.charAt(j)) {
+                if (str.charAt(i) != str.charAt(j)) {
+                    //it terminates if one char is unequal.
                     return false;
                 }
                 i++;
