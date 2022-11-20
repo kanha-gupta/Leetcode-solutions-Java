@@ -1,6 +1,6 @@
 public class No136_SingleNumber {
     public static void main(String[] args) {
-        int[]arr={1,1,2,2,3,4,4};
+        int[]arr={1,2,3,3,4,4,1};
         System.out.println(singleNumber(arr));
     }
     static int singleNumber(int[] nums){
