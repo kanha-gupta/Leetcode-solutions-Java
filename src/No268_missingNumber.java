@@ -17,12 +17,13 @@ public class No268_missingNumber {
     //Mathematical approach. Excellent time complexity
     public int missingNumber2(int[] nums){
         int sum=0;
+        int l=nums.length;
         for (int i = 0; i < nums.length; i++) {
             sum=sum+nums[i];
         }
         //it applies the logic of sum of natural numbers & substract the sum with it
         //to get the answer. using nums.length
-        return nums.length*(nums.length+1)/2-sum;
+        return l*(l+1)/2 - sum;
 
     }
 }
