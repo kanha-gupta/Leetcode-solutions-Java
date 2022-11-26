@@ -30,6 +30,5 @@ public class No350_Intersect {
                 map.put(nums2[i],freq);
             }
         }
-        return List
     }
 }
