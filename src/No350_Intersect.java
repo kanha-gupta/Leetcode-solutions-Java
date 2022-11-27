@@ -1,34 +1,32 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class No350_Intersect {
-    public static void main(String[] args) {
-        int[] nums1={1,2,2,1};
-        int[] nums2={2,2};
-        System.out.print(intersect(nums1,nums2));
-    }
-
-    static int[] intersect(int[] nums1, int[] nums2) {
-        HashMap<Integer,Integer> map= new HashMap<>();
-        for (int i = 0; i < nums1.length; i++) {
-            if(map.containsKey(nums1[i])){
-                map.put(nums1[i],map.get(nums1[i])+1);
+    public int[] intersect(int[] nums1, int[] nums2) {
+      //Time complexity would be O(NlogN) because of inbuilt .sort method
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        int i = 0, j = 0;
+        while(i < nums1.length && j < nums2.length){
+            if(nums1[i] < nums2[j]) {
+                i++;
+            }
+            else if(nums1[i] > nums2[j]){
+                j++;
             }
             else{
-                map.put(nums1[i],1);
+                result.add(nums1[i]);
+                i++;
+                j++;
             }
         }
-        //iterate 2nd array
-        List<Integer> result=new ArrayList<>();
-        for (int i = 0; i < nums2.length; i++) {
-            if(map.containsKey(nums2[i]) && map.get(nums2[i])>0){
-                result.add(nums2[i]);
-                int freq=map.get(nums2[i]);
-                freq--;
-                map.put(nums2[i],freq);
-            }
+        //we initialise a new array because we have to return an array & not an arraylist
+        int[] output = new int[result.size()];
+        int counter= 0;
+        while(counter < result.size()){
+            output[counter] = result.get(counter);
+            counter++;
         }
+        return output;
     }
 }
