@@ -15,7 +15,6 @@ public class No13_RomanToInt {
         hashmap.put('C',100);
         hashmap.put('D',500);
         hashmap.put('M',1000);
-
         for (int i = 0; i <s.length(); i++) {
             if(i+1==s.length() || hashmap.get(s.charAt(i+1)) <= hashmap.get(s.charAt(i))){
                 total=total+ hashmap.get(s.charAt(i));
