@@ -19,7 +19,6 @@ public class No374_NumberHighOrLow {
         }
         return -1;
     }
-
     private int guess(int mid) {
         return 0;
     } //this method is unnecessarily method as to not get errors in line 10.
