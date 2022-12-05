@@ -18,7 +18,6 @@ public class No234_PalindromeLinkedList {
             ptr=ptr.next;
             //this will fill the stack
         }
-
         while (head!=null){
             int i=stack.pop();
 
