@@ -10,7 +10,9 @@ public class No237_DeleteNode {
         //since we dont know previous nodes. the node we have to delete
         //will be changed to node.next val.
         node.val = node.next.val;
-        //after this we connect the next node of deleted node to its next node
+
         node.next = node.next.next;
+        //in this way node.next is skipped & instead the node we have to delete has value changed & its next pointer connected to node.next.next
+
     }
 }
