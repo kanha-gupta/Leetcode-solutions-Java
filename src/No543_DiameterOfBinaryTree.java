@@ -13,10 +13,11 @@ public class No543_DiameterOfBinaryTree {
         }
     }
     int ans=0;//declared outside to work on both functions
+
     public int diameterOfBinaryTree(TreeNode root) {
         if(root==null){
             return 0;
-        }
+        } //base condition
         height(root);
         return this.ans;
     }
@@ -24,9 +25,9 @@ public class No543_DiameterOfBinaryTree {
         if(root==null){
             return 0;
         }
-        int lh=height(root.left);
-        int rh=height(root.right);
-        ans=Math.max(ans, lh+rh);
-        return 1+ Math.max(lh,rh);
+        int lh=height(root.left); //left node counter
+        int rh=height(root.right); //right node counter
+        ans=Math.max(ans, lh+rh); //keeps upgrading value when theres a higher value found at any node
+        return 1+ Math.max(lh,rh); //+1 because of root node
     }
 }
