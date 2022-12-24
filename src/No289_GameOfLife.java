@@ -1,22 +1,22 @@
 public class No289_GameOfLife {
-    public static void main(String[] args) {
-        int[][] arr=ne int[10][20];
-        arr[0][0]=0;
-        arr[0][1]=1;
-        arr[0][2]=0;
-        arr[1][0]=0;
-        arr[1][1]=0;
-        arr[1][2]=1;
-        arr[2][0]=1;
-        arr[2][1]=1;
-        arr[2][2]=1;
-        arr[3][0]=0;
-        arr[3][1]=0;
-        arr[3][2]=0;
-        gameOfLife(arr);
-
-    }
-    static void gameOfLife(int[][] board) {
+//    public static void main(String[] args) {
+//        int[][] arr=ne int[10][20];
+//        arr[0][0]=0;
+//        arr[0][1]=1;
+//        arr[0][2]=0;
+//        arr[1][0]=0;
+//        arr[1][1]=0;
+//        arr[1][2]=1;
+//        arr[2][0]=1;
+//        arr[2][1]=1;
+//        arr[2][2]=1;
+//        arr[3][0]=0;
+//        arr[3][1]=0;
+//        arr[3][2]=0;
+//        gameOfLife(arr);
+//
+//    }
+    public void gameOfLife(int[][] board) {
         int n = board.length;
         if (n == 0) {
             return;
