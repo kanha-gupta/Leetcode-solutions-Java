@@ -36,7 +36,6 @@ public class No289_GameOfLife {
                         cnt++;
                     }
                 }
-
                 if (board[i][j] == 0 && cnt == 3) {
                     board[i][j] = 3;
                 } else  if (board[i][j] == 1 && (cnt < 2 || cnt > 3)) {
