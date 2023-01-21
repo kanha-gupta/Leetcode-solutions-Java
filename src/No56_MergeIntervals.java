@@ -7,7 +7,6 @@ public class No56_MergeIntervals {
                if(intervals[i][j]< intervals[i][j+1] ||
                        intervals[i][j]<intervals[i+1][j-1]);
                 {
-
                 }
             }
         }
