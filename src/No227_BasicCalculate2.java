@@ -14,15 +14,19 @@ public class No227_BasicCalculate2 {
 
                 if (isOperator(c) || i == s.length() - 1) {
                     if (operator == '+') {
-                        sum += last;
+                        sum=sum + last;
                         last = num;
                     }
                     else if (operator == '-') {
-                        sum += last;
+                        sum=sum+last;
                         last = -num;
                     }
-                    else if (operator == '*') last *= num;
-                    else if (operator == '/') last /= num;
+                    else if (operator == '*'){
+                        last *= num;
+                    }
+                    else if (operator == '/'){
+                        last /= num;
+                    }
 
                     num = 0;
                     operator = c;
@@ -32,7 +36,7 @@ public class No227_BasicCalculate2 {
             return sum += last;
         }
 
-        private boolean isOperator(char c) {
+        private static boolean isOperator(char c) {
             return c == '+' || c == '-' || c == '*' || c == '/';
         }
 
