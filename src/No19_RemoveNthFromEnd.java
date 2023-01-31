@@ -23,7 +23,7 @@ public class No19_RemoveNthFromEnd {
             fast=fast.next;
         } //this moves both together until slow pointer reaches the node it needs to be skipped
 
-        slow.next=slow.next.next;
+        slow.next=slow.next.next; //this skips the desirable node
 
         return start.next;
     }
