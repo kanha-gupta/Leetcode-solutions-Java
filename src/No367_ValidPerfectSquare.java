@@ -8,7 +8,8 @@ public class No367_ValidPerfectSquare {
             long mid= (start+end)/2;
             if(mid*mid==num){
                 return true;
-            } else if (mid*mid > num) {
+            }
+            else if (mid*mid > num) {
                 end=mid-1;
             }
             else{
