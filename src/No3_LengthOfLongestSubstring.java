@@ -8,6 +8,7 @@ public class No3_LengthOfLongestSubstring {
        int left=0;
        int right=0;
        int result=0; //Result is the max difference of left & right
+        //the code traverses both from left and right & Maps the Character with the index of the Char Array
         while(right<s.length()){
             char charRight=s.charAt(right);
             map.put(charRight, map.getOrDefault(charRight,0)+1);
