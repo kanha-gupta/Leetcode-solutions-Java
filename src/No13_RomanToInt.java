@@ -2,10 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class No13_RomanToInt {
-    public static void main(String[] args) {
-        System.out.println( rti2("XCC"));
-    }
-    static int rti2(String s){
+    public int rti2(String s){
         int total=0;
         Map<Character,Integer> hashmap=new HashMap<>();
         hashmap.put('I',1);
