@@ -1,14 +1,12 @@
 public class No55_JumpGame {
     public boolean canJump(int[] nums) {
-        int MaxJumpReach = 0;
-        for (int i=0; i<nums.length; ++i) {
-            //the main thing to care about is that i shouldnt get greater than MaxJumpReach because if it does,
-            //it will mean that we cannot reach to the last index & code should terminate
-            if (i > MaxJumpReach){
-                return false;
+        int n = nums.length;
+        int finalPosition = n-1; //sets last index as position
+        for(int i = n-2; i>=0; i--){  //start from 2nd last element and checks if left elements add up to reach the final position
+            if (i + nums[i]>= finalPosition) {
+                finalPosition = i; //if criteria fulfills, finalPosition keeps shifting left until no more elements are left to traverse
             }
-            MaxJumpReach = Math.max(MaxJumpReach, i + nums[i]);
         }
-        return true;
+        return finalPosition ==0;
     }
 }
